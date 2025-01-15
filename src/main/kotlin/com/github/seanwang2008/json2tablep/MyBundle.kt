@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.seanwang2008.json2tablep
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
