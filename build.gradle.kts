@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
+//    id("org.jetbrains.intellij") version "1.17.2"
 }
 
 group = providers.gradleProperty("pluginGroup").get()
@@ -48,6 +49,9 @@ dependencies {
         zipSigner()
         testFramework(TestFrameworkType.Platform)
     }
+
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
+    implementation("org.freemarker:freemarker:2.3.32")
 }
 
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html

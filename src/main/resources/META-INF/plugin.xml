@@ -15,4 +15,13 @@
     <applicationListeners>
         <listener class="com.github.seanwang2008.json2tablep.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+
+    <actions>
+        <action id="JsonToForm.Convert"
+                class="com.plugin.json2form.action.JsonToFormAction"
+                text="Convert to HTML Form"
+                description="Convert JSON to HTML Form">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
