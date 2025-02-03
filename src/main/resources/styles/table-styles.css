@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+}
+
+/* 全局按钮样式 */
+.global-buttons {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.global-btn {
+    padding: 8px 16px;
+    margin: 0 8px;
+    background-color: #495057;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.global-btn:hover {
+    background-color: #868e96;
+}
+
+/* 主表格样式 */
+.json-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.json-table th {
+    background-color: #495057;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.json-table td {
+    padding: 12px 16px;
+    border: 1px solid #e9ecef;
+    color: #495057;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.json-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.json-table tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* 嵌套表格样式 */
+.json-table td table {
+    width: 100%;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.json-table td table td {
+    border-width: 1px;
+    border-color: #f1f3f5;
+    padding: 10px 14px;
+}
+
+.json-table td table th {
+    background-color: #868e96;
+    padding: 10px 14px;
+    font-size: 13px;
+    vertical-align: top;
+}
+
+/* 展开/折叠按钮样式 */
+.toggle-btn {
+    min-width: 60px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 8px;
+    cursor: pointer;
+    background-color: #e9ecef;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #495057;
+    user-select: none;
+    padding: 0 8px;
+    position: relative;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+.toggle-btn:hover {
+    background-color: #dee2e6;
+}
+
+.toggle-btn::before {
+    content: "+";
+}
+
+.toggle-btn.expanded::before {
+    content: "-";
+}
+
+/* 内容布局样式 */
+.cell-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    width: 100%;
+}
+
+.content-wrapper {
+    flex: 1;
+    min-height: 24px;
+    position: relative;
+}
+
+/* 列表样式 */
+.json-table ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #495057;
+    list-style-type: disc;
+}
+
+.json-table li {
+    margin: 5px 0;
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+/* 折叠状态 */
+.content-wrapper table.collapsed,
+.content-wrapper .list-wrapper.collapsed {
+    display: none !important;
+}
+
+/* 特殊单元格样式 */
+.json-table td.has-children {
+    padding: 0;
+}
+
+.json-table td:has(table) {
+    padding: 0;
+    border: 1px solid #e9ecef;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 600px) {
+    .json-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* 列表样式 */
+.list-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+/* 嵌套列表样式 */
+.json-table ul ul {
+    list-style-type: circle;
+}
+
+.json-table ul ul ul {
+    list-style-type: square;
+} 

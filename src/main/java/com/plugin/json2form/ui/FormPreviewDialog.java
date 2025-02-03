@@ -8,6 +8,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 import java.awt.*;
 
+@Deprecated
 public class FormPreviewDialog extends DialogWrapper {
     private final String htmlContent;
 
