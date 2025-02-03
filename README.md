@@ -4,24 +4,28 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
-
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+# JSON to Form Converter
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+A powerful IntelliJ IDEA plugin that transforms JSON data into interactive HTML forms instantly. Perfect for developers working on form-based applications or needing quick visual representation of JSON structures.
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+## Key Features:
+- Convert JSON data to HTML forms with a single click
+- Live preview of the generated form
+- Support for nested JSON objects and arrays
+- Customizable form field types based on JSON data types
+- Clean and responsive form output
+- Copy generated HTML code directly to clipboard
+
+## Use Cases:
+- Rapid prototyping of web forms
+- Visualizing complex JSON structures
+- Creating form templates from API responses
+- Testing form layouts and structures
+
+Whether you're building web applications, designing APIs, or need to quickly visualize JSON data structures, JSON to Form Converter streamlines your workflow by providing instant, visual feedback of your JSON data in a familiar form format.
+
+Compatible with IntelliJ IDEA 2024.1 and above. 
 <!-- Plugin description end -->
 
 ## Installation
@@ -45,7 +49,3 @@ To keep everything working, do not remove `<!-- ... -->` sections.
 
 
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
-
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
