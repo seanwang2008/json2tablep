@@ -19,7 +19,7 @@
     <actions>
         <action id="JsonToForm.Convert"
                 class="com.plugin.json2form.action.JsonToFormAction"
-                text="Convert to HTML Form"
+                text="Json to Table"
                 description="Convert JSON to HTML Form">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </action>

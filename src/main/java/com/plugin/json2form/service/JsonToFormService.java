@@ -70,13 +70,13 @@ public final class JsonToFormService {
             writer.write("<!DOCTYPE html>\n<html>\n<head>\n");
             writer.write("<meta charset=\"UTF-8\">\n");
             writer.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-            writer.write("<title>JSON数据表格展示</title>\n");
+            writer.write("<title>Json2Table</title>\n");
             writer.write("<style>\n");
             writer.write(cssStyles);
             writer.write("\n</style>\n");
             writer.write(JAVASCRIPT_CODE);
             writer.write("</head>\n<body>\n");
-            writer.write("<h1 style=\"text-align: center; color: #333;\">JSON数据表格展示</h1>\n");
+            writer.write("<h1 style=\"text-align: center; color: #333;\">Json2Table</h1>\n");
             writer.write(GLOBAL_BUTTONS);
             writer.write(html);
             writer.write("\n</body></html>");
