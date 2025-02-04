@@ -2,7 +2,6 @@ package com.plugin.json2form.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.intellij.openapi.components.Service;
-import freemarker.template.Configuration;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -16,12 +15,8 @@ import java.util.Map;
 public final class JsonToFormService {
     private static final JsonToFormService instance = new JsonToFormService();
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private final Configuration freemarkerConfig;
 
     private JsonToFormService() {
-        freemarkerConfig = new Configuration(Configuration.VERSION_2_3_32);
-        freemarkerConfig.setClassLoaderForTemplateLoading(getClass().getClassLoader(), "/templates");
-        freemarkerConfig.setDefaultEncoding("UTF-8");
     }
 
     public static JsonToFormService getInstance() {
@@ -124,8 +119,8 @@ public final class JsonToFormService {
 
     private static final String GLOBAL_BUTTONS = """
         <div class="global-buttons">
-            <button class="global-btn" onclick="toggleAll(true)">展开全部</button>
-            <button class="global-btn" onclick="toggleAll(false)">折叠全部</button>
+            <button class="global-btn" onclick="toggleAll(true)">expanded</button>
+            <button class="global-btn" onclick="toggleAll(false)">collapsed</button>
         </div>
         """;
 
