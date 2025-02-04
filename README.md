@@ -1,8 +1,8 @@
 # json2tablep
 
 ![Build](https://github.com/seanwang2008/json2tablep/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/26461.svg)](https://plugins.jetbrains.com/plugin/26461)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/26461.svg)](https://plugins.jetbrains.com/plugin/26461)
 
 <!-- Plugin description -->
 # JSON to Form Converter
