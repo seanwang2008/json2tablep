@@ -1,5 +1,11 @@
 package com.plugin.json2form.action;
 
+import java.awt.Desktop;
+import java.io.File;
+
+import org.jetbrains.annotations.NotNull;
+
+import com.intellij.openapi.actionSystem.ActionUpdateThread;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -7,12 +13,13 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiFile;
 import com.plugin.json2form.service.JsonToFormService;
-import org.jetbrains.annotations.NotNull;
-
-import java.awt.*;
-import java.io.File;
 
 public class JsonToFormAction extends AnAction {
+
+    @Override
+    public @NotNull ActionUpdateThread getActionUpdateThread() {
+        return ActionUpdateThread.BGT;
+    }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
@@ -76,13 +83,16 @@ public class JsonToFormAction extends AnAction {
         }
     }
 
-
     @Override
     public void update(@NotNull AnActionEvent e) {
-        // 只有当选中的是json文件时才启用该action
-        PsiFile psiFile = e.getData(CommonDataKeys.PSI_FILE);
-        e.getPresentation().setEnabledAndVisible(
-            psiFile != null && "json".equals(psiFile.getVirtualFile().getExtension())
-        );
+        Project project = e.getProject();
+        VirtualFile file = e.getData(CommonDataKeys.VIRTUAL_FILE);
+        
+        // 只在项目存在且选中的文件是JSON文件时启用
+        boolean enabled = project != null && 
+                         file != null && 
+                         !file.isDirectory() && 
+                         "json".equalsIgnoreCase(file.getExtension());
+        e.getPresentation().setEnabledAndVisible(enabled);
     }
 } 
